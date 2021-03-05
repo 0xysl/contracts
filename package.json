@@ -1,0 +1,24 @@
+{
+  "name": "ktz-hh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "hardhat": "^2.1.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.5"
+  },
+  "scripts": {
+    "deploy": "yarn hardhat compile && yarn hardhat run --network testnet scripts/deploy.js",
+    "verify": "npx hardhat verify --network testnet 0xF36eb07B06DD945e36F44725640c85bA910dc843"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^3.4.1",
+    "chai": "^4.3.3",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.0.31"
+  }
+}
