@@ -4,21 +4,33 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@typechain/ethers-v5": "^6.0.1",
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.31",
     "hardhat": "^2.1.1",
     "prettier": "^2.2.1",
-    "prettier-plugin-solidity": "^1.0.0-beta.5"
+    "prettier-plugin-solidity": "^1.0.0-beta.5",
+    "ts-node": "^9.1.1",
+    "typechain": "^4.0.2",
+    "typescript": "^4.2.3"
   },
   "scripts": {
-    "deploy": "yarn hardhat compile && yarn hardhat run --network testnet scripts/deploy.js",
-    "verify": "npx hardhat verify --network testnet 0xF36eb07B06DD945e36F44725640c85bA910dc843"
+    "deploy": "yarn hardhat compile && yarn hardhat run --network testnet scripts/deploy.ts",
+    "verify": "npx hardhat verify --network testnet 0xF36eb07B06DD945e36F44725640c85bA910dc843",
+    "build": "yarn hardhat compile"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.1",
     "@nomiclabs/hardhat-etherscan": "^2.1.1",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^3.4.1",
+    "@types/dotenv": "^8.2.0",
     "chai": "^4.3.3",
+    "dotenv": "^8.2.0",
     "ethereum-waffle": "^3.3.0",
-    "ethers": "^5.0.31"
+    "ethers": "^5.0.31",
+    "hardhat-typechain": "^0.3.5",
+    "ts-generator": "^0.1.1"
   }
 }

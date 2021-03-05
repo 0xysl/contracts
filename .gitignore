@@ -9,3 +9,6 @@ artifacts
 .secret
 
 .vscode
+
+.env
+*.dbg.json
